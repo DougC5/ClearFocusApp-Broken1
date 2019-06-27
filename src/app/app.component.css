@@ -1,0 +1,15 @@
+/* Add Componet CSS Here */
+.mainContainer {
+    position: absolute;
+    top: 70px;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+    background: #fff;
+  }
+
+  
+
+.editDrawer{
+  width: 400px; 
+}

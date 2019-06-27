@@ -1,0 +1,49 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!-- Image and text -->
+
+<app-header></app-header>
+
+      
+<main>
+
+    <mat-drawer-container class="mainContainer" hasBackdrop="false">
+
+        <mat-drawer #mainNav opened mode="side" *ngIf="nav"> 
+            <app-navbar></app-navbar> 
+            <button mat-raised-button (click)="navToggle()"> <-- </button>
+        </mat-drawer>
+
+        <mat-drawer #mainNav opened mode="side" *ngIf= "!nav"> 
+                <app-small-bar></app-small-bar>
+                <button mat-raised-button (click)="navToggle()"> --> </button>
+            </mat-drawer>
+        
+        <mat-drawer #editDrawer class="editDrawer" name="editDrawer" mode="side" position="end">
+                <router-outlet name="sideEdit"></router-outlet>
+                <button mat-raised-button (click)="toggleEdit()">Close</button>
+        </mat-drawer>
+        
+        <mat-drawer-content>
+                <router-outlet></router-outlet>
+        </mat-drawer-content>
+        
+        
+      </mat-drawer-container>
+
+</main>
+      
+
+    <!-- <div class="row flex-xl-nowrap">
+
+        <div class="col-4 col-md-3 col-xl-3 bd-sidebar border border-secondary">
+            <app-navbar></app-navbar>
+        </div>
+
+
+        <main class="col border border-secondary">
+        <app-todo></app-todo>
+        </main>
+    
+    </div> RowFlex -->
+ <!-- container -->
